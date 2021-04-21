@@ -46,7 +46,7 @@ ext.runtime.onMessage.addListener(onRequest);
  */
 function *idGenerator() {
   for (let i = 0; true; i++) {
-    yield `github-mermaid-extension-${i}`
+    yield `any-github-mermaid-extension-${i}`
   }
 }
 
@@ -79,7 +79,7 @@ function renderError(message, target) {
 /**
  * Generate a Mermaid diagram into a new <div>
  * @param {HTMLPreElement} source Element containing the diagram source code, in Mermaid language.
- * @param {string} id A unique element id. 
+ * @param {string} id A unique element id.
  * @returns {HTMLDivElement} The new <div> element.
  */
 function processElement(source, id) {
@@ -99,7 +99,7 @@ function processElement(source, id) {
       source.style.display = 'none'
     }
 
-    render(code, target, id)    
+    render(code, target, id)
   } catch (error) {
     renderError(error.message, target)
     throw error

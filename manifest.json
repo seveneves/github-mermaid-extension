@@ -1,5 +1,5 @@
 {
-  "name": "GitHub + Mermaid",
+  "name": "Any GitHub + Mermaid",
   "version": "0.1.1",
   "manifest_version": 2,
   "description": "A browser extension for Chrome, Opera & Firefox that adds Mermaid language support to GitHub.",
@@ -14,8 +14,7 @@
     ]
   },
   "permissions": [
-    "https://github.com/*",
-    "https://*.github.com/*"
+    "activeTab"
   ],
   "options_ui": {
     "page": "options.html"
@@ -23,8 +22,7 @@
   "content_scripts": [
     {
       "matches": [
-        "https://github.com/*",
-        "https://*.github.com/*"
+        "<all_urls>"
       ],
       "js": [
         "scripts/contentscript.js"
@@ -38,7 +36,7 @@
       "19": "icons/icon-19.png",
       "38": "icons/icon-38.png"
     },
-    "default_title": "GitHub + Mermaid",
+    "default_title": "Any GitHub + Mermaid",
     "default_popup": "popup.html"
   }
 }

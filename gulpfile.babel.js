@@ -34,7 +34,7 @@ const manifest = {
   firefox: {
     applications: {
       gecko: {
-        id: 'github-mermaid-extension@amercier.com'
+        id: 'any-github-mermaid-extension@freeforall.com'
       }
     }
   }
